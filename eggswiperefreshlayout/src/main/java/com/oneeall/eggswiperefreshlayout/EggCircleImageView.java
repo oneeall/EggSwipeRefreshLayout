@@ -29,7 +29,7 @@ class EggCircleImageView extends GifImageView {
 
 
     //TODO: Set shadow radius ke 0 dari 3.5f dan shadow elevation 4 ke 0
-    private static final float SHADOW_RADIUS = 0f;
+    private static final float SHADOW_RADIUS = 3.5f;
     private static final int SHADOW_ELEVATION = 0;
 
     private Animation.AnimationListener mListener;
@@ -52,7 +52,7 @@ class EggCircleImageView extends GifImageView {
             circle = new ShapeDrawable(oval);
             ViewCompat.setLayerType(this, ViewCompat.LAYER_TYPE_SOFTWARE, circle.getPaint());
             circle.getPaint().setShadowLayer(mShadowRadius, shadowXOffset, shadowYOffset,
-                    KEY_SHADOW_COLOR);
+                    Color.TRANSPARENT);
             final int padding = mShadowRadius;
             // set padding so the inner image sits correctly within the shadow.
             setPadding(padding, padding, padding, padding);
